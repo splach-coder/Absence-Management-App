@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/lst.css">
+    <title>Liste</title>
+</head>
+<a href="/">
+    <div class="arrow">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+</a>
+
+<body>
+    <div class="container">
+        <table>
+          <thead>
+            <tr>
+                <div class="col col-1"> <th>ID</th> </div>
+                <div class="col col-2"> <th>Nom Complet</th> </div>
+                <div class="col col-3"> <th>Email</th> </div>
+                <div class="col col-4"> <th>Telephone</th> </div>
+            </tr>
+          </thead>
+          <tbody>
+            <% users.forEach(function(user) {%>
+            <tr>
+              <div class="col col-1" data-label="ID"> <td><%= user.id %></td>
+              <div class="col col-2" data-label="Nom Complet"><td><%= user.full_name %></td>
+              <div class="col col-3" data-label="Email"><td><%= user.email %></td>
+              <div class="col col-4" data-label="Telephone"><td><%= user.tel %></td>
+            </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      </div>
+      <button> 
+        <a class="buttono" href="/form" style="--color:#1e9bff;">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Ajouter
+          </a>
+      </button>
+
+</body>
+</html>
